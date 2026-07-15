@@ -43,6 +43,7 @@ input {
     text-align: right;
     cursor: pointer; 
     border-radius: 1rem;
+    color: #ffffff;
 }
 input::placeholder{
     color: #ffffff;
