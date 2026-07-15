@@ -33,9 +33,9 @@ body{
 }
 
 input {
-    width: 100%;
+    width:100% ;
     border: none;
-    padding: 24px;
+    padding: clamp(12px, 3vw, 24px);
     margin-bottom: 15px;
     background: transparent;
     box-shadow: 0 8px 32px rgba(0,0,0,1);
@@ -44,6 +44,7 @@ input {
     cursor: pointer; 
     border-radius: 1rem;
     color: #ffffff;
+    overflow: hidden;
 }
 input::placeholder{
     color: #ffffff;
@@ -51,18 +52,29 @@ input::placeholder{
 input:focus{
     outline:none;
 }
+
+.buttons{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+}
+
 button{
    border: none;
-   width: clamp(50px, 12vw, 65px);
-   height: clamp(50px , 12vw , 65px);
+   width: 100%;
+   aspect-ratio: 1;
    border-radius: 50%;
-   margin: 9px;
+   margin: 0;
    background: transparent;
    box-shadow: 0 8px 32px rgba(0,0,0,1);
    color: #ffffff;
-   font-size:clamp(1rem, 3vw, 1.8rem);
+   font-size:clamp(1.8rem, 7vw, 2rem);
    transition: 0.2s  ease;
    overflow: hidden;
+}
+
+button i {
+    font-size: inherit;
 }
 
 button:hover{
@@ -84,7 +96,7 @@ button:active{
     background-color: rgb(69, 3, 69);
 }
 .size{
-    font-size:clamp(1rem, 5vw, 1.5rem);
+    font-size:clamp(1.6rem, 5vw, 1.8rem);
 }
 
 @media (max-width: 480px){
@@ -93,8 +105,5 @@ button:active{
         padding:15px;
     }
 
-    button{
-        margin:5px;
-    }
 
 }
